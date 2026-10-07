@@ -114,44 +114,37 @@ if user_works:
     S2 = put_on_screen(S2, works[:3])
 
 # ---------- timeline (seconds) ----------
+# Scene starts follow the pauses in the full voiceover vo/bella_full.mp3 (48 s).
+T = [0, 2.89, 11.81, 22.71, 30.69, 38.70]
+DUR = 48.6
 shots = [  # (start, end, frame_fn(t))
-    (0, 2, lambda t: cover(S3, t, 1.02, 1.10, 0.52, 0.45, 0.55, 0.42)),
-    (2, 6, lambda t: cover(S2, t, 1.0, 1.9, 0.45, 0.45, 0.30, 0.37)),
+    (T[0], T[1], lambda t: cover(S3, t, 1.02, 1.10, 0.52, 0.45, 0.55, 0.42)),
+    (T[1], 7.6, lambda t: cover(S2, t, 1.0, 1.6, 0.45, 0.45, 0.33, 0.38)),
+    (7.6, T[2], lambda t: cover(S2, t, 2.3, 2.6, 0.22, 0.37, 0.38, 0.36)),
 ]
 n = len(works[:4])
-seg = 5 / n
+seg = (T[3] - T[2]) / n
 for i, w in enumerate(works[:4]):
-    shots.append((6 + i * seg, 6 + (i + 1) * seg, lambda t, w=w: card(w, t)))
+    shots.append((T[2] + i * seg, T[2] + (i + 1) * seg, lambda t, w=w: card(w, t)))
 shots += [
-    (11, 13.5, lambda t: cover(S5, t, 1.05, 1.15, 0.55, 0.42, 0.52, 0.45)),
-    (13.5, 16, lambda t: cover(S1, t, 1.10, 1.03, 0.50, 0.40, 0.50, 0.42)),
-    (16, 21, lambda t: card(final_visual, t, 1.0, 1.08)),
-    (21, 25, lambda t: cover(S4, t, 1.0, 1.06, 0.55, 0.45, 0.55, 0.43)),
+    (T[3], 26.8, lambda t: cover(S5, t, 1.05, 1.15, 0.55, 0.42, 0.52, 0.45)),
+    (26.8, T[4], lambda t: cover(S1, t, 1.10, 1.03, 0.50, 0.40, 0.50, 0.42)),
+    (T[4], T[5], lambda t: card(final_visual, t, 1.0, 1.10)),
+    (T[5], DUR, lambda t: cover(S4, t, 1.0, 1.08, 0.55, 0.45, 0.55, 0.43)),
 ]
 
 # on-screen titles: (start, end, text, y, size, font)
 titles = [
-    (0.15, 2.0, "Začínam prakticky\nod nuly.", 330, 86, FONT_B),
-    (2.6, 6.0, "AI → tvorba → niečo vlastné", 300, 62, FONT_B),
-    (12.0, 16.0, "A práve preto\nzačínam teraz.", 330, 82, FONT_B),
-    (21.4, 25.0, "DAY 01", 300, 150, FONT_B),
-    (21.9, 25.0, "building something of my own with AI", 480, 46, FONT_L),
+    (0.15, T[1], "Začínam prakticky\nod nuly.", 330, 86, FONT_B),
+    (3.4, T[2], "AI → tvorba → niečo vlastné", 300, 62, FONT_B),
+    (T[3] + 1.5, T[4], "A práve preto\nzačínam teraz.", 330, 82, FONT_B),
+    (T[5] + 0.5, DUR, "DAY 01", 300, 150, FONT_B),
+    (T[5] + 1.0, DUR, "building something of my own with AI", 480, 46, FONT_L),
+    (44.2, DUR, "Ak chceš vidieť, kam sa to posunie, zostaň.", 1480, 54, FONT),
 ]
-# voiceover captions
-captions = [
-    (0.0, 2.0, "Neviem, kam ma toto dostane. Ale chcem to skúsiť."),
-    (2.0, 4.0, "Učím sa tvoriť s AI a posledné mesiace zisťujem,"),
-    (4.0, 6.0, "že toto už pre mňa nie je len hranie sa s obrázkami."),
-    (6.0, 8.5, "Chcem zistiť, či sa dá z jedného nápadu, notebooku a kreativity"),
-    (8.5, 11.0, "postupne vybudovať skutočná práca."),
-    (11.0, 13.5, "Nemám obrovské publikum. Nemám veľký tím."),
-    (13.5, 16.0, "A úprimne, ešte veľa vecí neviem."),
-    (16.0, 18.5, "Budem tu ukazovať celý proces."),
-    (18.5, 21.0, "Aj to, čo funguje. Aj to, čo vôbec nefunguje."),
-    (21.0, 23.0, "Takže toto je deň jeden. Uvidíme, kam sa dostanem."),
-    (23.0, 25.0, "Ak chceš vidieť, kam sa to posunie, zostaň."),
-]
-DUR = 25
+# VO captions are left to Instagram/CapCut auto-captions (they sync to the real audio)
+captions = []
+
 
 
 def wrap(draw, text, font, maxw):
@@ -242,7 +235,9 @@ def duration(path):
 
 
 def mix_voiceover(video):
-    clips = [(os.path.join(HERE, "vo", f"scene{i}.mp3"), slot) for i, slot in enumerate(VO_SLOTS, 1)]
+    full = os.path.join(HERE, "vo", "bella_full.mp3")
+    clips = [(full, (0, DUR))] if os.path.exists(full) else \
+        [(os.path.join(HERE, "vo", f"scene{i}.mp3"), slot) for i, slot in enumerate(VO_SLOTS, 1)]
     clips = [(c, slot) for c, slot in clips if os.path.exists(c)]
     if not clips:
         return
@@ -262,7 +257,6 @@ def mix_voiceover(video):
 
 
 if __name__ == "__main__":
-    srt()
     out = os.path.join(HERE, "day01.mp4")
     p = subprocess.Popen([
         "ffmpeg", "-y", "-loglevel", "error",
@@ -270,7 +264,7 @@ if __name__ == "__main__":
         "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
         "-shortest", "-c:v", "libx264", "-preset", "slow", "-crf", "20", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
-    for i in range(DUR * FPS):
+    for i in range(int(DUR * FPS)):
         p.stdin.write(frame_at(i / FPS).tobytes())
     p.stdin.close()
     p.wait()
