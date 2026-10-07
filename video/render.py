@@ -232,6 +232,35 @@ def srt():
             f.write(f"{i}\n{ts(a)} --> {ts(b)}\n{txt}\n\n")
 
 
+# voiceover: vo/scene1..6.mp3, each placed at its scene start and sped up if it overruns
+VO_SLOTS = [(0.15, 2.0), (2.0, 6.0), (6.0, 11.0), (11.0, 16.0), (16.0, 21.0), (21.0, 25.0)]
+
+
+def duration(path):
+    return float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                          "-of", "csv=p=0", path]).strip())
+
+
+def mix_voiceover(video):
+    clips = [(os.path.join(HERE, "vo", f"scene{i}.mp3"), slot) for i, slot in enumerate(VO_SLOTS, 1)]
+    clips = [(c, slot) for c, slot in clips if os.path.exists(c)]
+    if not clips:
+        return
+    args, chains = ["ffmpeg", "-y", "-loglevel", "error", "-i", video], []
+    for k, (c, (a, b)) in enumerate(clips, 1):
+        args += ["-i", c]
+        tempo = min(max(duration(c) / (b - a - 0.1), 1.0), 1.35)
+        ms = int(a * 1000)
+        chains.append(f"[{k}:a]atempo={tempo:.3f},adelay={ms}|{ms}[v{k}]")
+    mix = "".join(f"[v{k}]" for k in range(1, len(clips) + 1))
+    chains.append(f"{mix}amix=inputs={len(clips)}:normalize=0,apad,atrim=0:{DUR},loudnorm=I=-14:TP=-1.5[a]")
+    tmp = video + ".tmp.mp4"
+    subprocess.run(args + ["-filter_complex", ";".join(chains), "-map", "0:v", "-map", "[a]",
+                           "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+                           "-movflags", "+faststart", tmp], check=True)
+    os.replace(tmp, video)
+
+
 if __name__ == "__main__":
     srt()
     out = os.path.join(HERE, "day01.mp4")
@@ -245,4 +274,5 @@ if __name__ == "__main__":
         p.stdin.write(frame_at(i / FPS).tobytes())
     p.stdin.close()
     p.wait()
+    mix_voiceover(out)
     print("wrote", out)

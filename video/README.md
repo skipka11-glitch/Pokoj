@@ -5,3 +5,5 @@
 
 Re-render: `python3 render.py` (potrebuje ffmpeg + Pillow).
 Vlastné AI práce daj do `works/` (jpg/png) – scéna 3 ich prestrihá, posledná ide do scény 5.
+
+Voiceover: daj `scene1.mp3` … `scene6.mp3` (hlas Bella z Higgsfieldu, jedna nahrávka na scénu) do `vo/` a spusti `python3 render.py` – hlas sa vloží na začiatok každej scény.
