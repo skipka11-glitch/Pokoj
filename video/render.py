@@ -65,6 +65,7 @@ works = [Image.open(p).convert("RGB") for p in sorted(
     glob.glob(os.path.join(HERE, "works", "*.jpg")) +
     glob.glob(os.path.join(HERE, "works", "*.jpeg")) +
     glob.glob(os.path.join(HERE, "works", "*.png")))]
+user_works = bool(works)
 if not works:
     def scr(box):
         return ImageEnhance.Brightness(ImageEnhance.Sharpness(S2.crop(box)).enhance(1.3)).enhance(0.9)
@@ -73,6 +74,44 @@ if not works:
     final_visual = right
 else:
     final_visual = works[-1]
+
+# ---------- your works on the laptop screen (scene 2) ----------
+SCREEN = [(52, 512), (488, 415), (542, 652), (150, 783)]  # TL, TR, BR, BL in source/2.jpg
+
+
+def persp_coeffs(src, dst):
+    import numpy as np
+    A, B = [], []
+    for (x, y), (u, v) in zip(dst, src):
+        A += [[x, y, 1, 0, 0, 0, -u * x, -u * y], [0, 0, 0, x, y, 1, -v * x, -v * y]]
+        B += [u, v]
+    return np.linalg.solve(np.array(A, float), np.array(B, float)).tolist()
+
+
+def put_on_screen(photo, arts):
+    sw, sh = 1600, 1000
+    scr = Image.new("RGB", (sw, sh), (244, 242, 240))
+    gap = 40
+    cw = (sw - gap * (len(arts) + 1)) // len(arts)
+    for i, a in enumerate(arts):
+        s = min(cw / a.width, (sh - 140) / a.height)
+        t = a.resize((int(a.width * s), int(a.height * s)), Image.LANCZOS)
+        scr.paste(t, (gap + i * (cw + gap) + (cw - t.width) // 2, (sh - 60 - t.height) // 2))
+    ImageDraw.Draw(scr).rectangle((0, sh - 46, sw, sh), fill=(226, 228, 233))  # taskbar
+    scr = ImageEnhance.Brightness(scr).enhance(1.05).filter(ImageFilter.GaussianBlur(1.2))
+    ss = 3  # supersample for clean edges
+    big = photo.resize((photo.width * ss, photo.height * ss), Image.LANCZOS)
+    quad = [(x * ss, y * ss) for x, y in SCREEN]
+    warped = scr.transform(big.size, Image.PERSPECTIVE,
+                           persp_coeffs([(0, 0), (sw, 0), (sw, sh), (0, sh)], quad), Image.BICUBIC)
+    mask = Image.new("L", big.size, 0)
+    ImageDraw.Draw(mask).polygon(quad, fill=255)
+    big.paste(warped, (0, 0), mask.filter(ImageFilter.GaussianBlur(ss)))
+    return big.resize(photo.size, Image.LANCZOS)
+
+
+if user_works:
+    S2 = put_on_screen(S2, works[:3])
 
 # ---------- timeline (seconds) ----------
 shots = [  # (start, end, frame_fn(t))
