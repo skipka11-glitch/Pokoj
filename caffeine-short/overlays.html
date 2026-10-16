@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Overlays</title>
+<style>
+  @font-face { font-family: Inter; font-weight: 500; src: url(fonts/inter-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF; }
+  @font-face { font-family: Inter; font-weight: 500; src: url(fonts/inter-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-024F, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F; }
+  @font-face { font-family: Inter; font-weight: 800; src: url(fonts/inter-latin-800-normal.woff2) format('woff2'); unicode-range: U+0000-00FF; }
+  @font-face { font-family: Inter; font-weight: 800; src: url(fonts/inter-latin-ext-800-normal.woff2) format('woff2'); unicode-range: U+0100-024F, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2113, U+2C60-2C7F; }
+  :root { --ade: #a98bff; --caf: #ffa53a; --rec: #3fe0c5; }
+  html, body { margin: 0; background: transparent; }
+  body { width: 1080px; height: 1920px; position: relative; font-family: Inter, sans-serif; color: #fff; }
+  .ov { position: absolute; inset: 0; display: none; }
+  .ov.on { display: block; }
+  .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 760px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.72) 55%, rgba(0,0,0,.8)); }
+  .low { position: absolute; left: 70px; right: 70px; top: 1380px; text-align: center; font-weight: 800; font-size: 82px; line-height: 1.08; letter-spacing: -.01em; text-shadow: 0 4px 30px rgba(0,0,0,.6); }
+  .soft { font-weight: 500; font-size: 64px; letter-spacing: .01em; top: 1470px; opacity: .95; }
+  .title { position: absolute; left: 60px; right: 60px; top: 300px; text-align: center; font-weight: 800; font-size: 112px; line-height: 1.02; letter-spacing: -.015em; text-shadow: 0 4px 40px rgba(0,0,0,.55); }
+  .title.two { font-size: 92px; top: 250px; }
+  .ade { color: var(--ade); } .caf { color: var(--caf); }
+  .legend { position: absolute; left: 0; right: 0; top: 1236px; display: flex; justify-content: center; gap: 56px; font-weight: 500; font-size: 40px; text-shadow: 0 2px 14px rgba(0,0,0,.7); }
+  .legend span { display: flex; align-items: center; gap: 16px; }
+  .legend i { width: 30px; height: 30px; border-radius: 50%; display: block; box-shadow: 0 0 18px currentColor; }
+  .chip { position: absolute; top: 430px; left: 531px; transform: translateX(-50%); padding: 14px 28px; border-radius: 40px; border: 3px solid var(--rec); background: rgba(4,20,24,.72); color: #fff; font-weight: 800; font-size: 44px; white-space: nowrap; box-shadow: 0 0 30px rgba(63,224,197,.45); }
+  .arrow { position: absolute; left: 529px; top: 512px; width: 4px; height: 180px; background: var(--rec); box-shadow: 0 0 14px var(--rec); border-radius: 2px; }
+  .arrow::after { content: ""; position: absolute; left: -15px; bottom: -22px; border: 17px solid transparent; border-top: 26px solid var(--rec); border-bottom: 0; }
+</style>
+</head>
+<body>
+  <div class="ov" id="t1"><div class="shade"></div><div class="low">Čo robí <span class="caf">kofeín</span><br>v mozgu?</div></div>
+  <div class="ov" id="t2"><div class="shade"></div><div class="low soft">O niečo neskôr…</div></div>
+  <div class="ov" id="legend"><div class="legend"><span><i class="ade" style="background:var(--ade)"></i>Adenozín</span><span><i class="caf" style="background:var(--caf)"></i>Kofeín</span></div></div>
+  <div class="ov" id="t3"><div class="title ade">Adenozín</div></div>
+  <div class="ov" id="t4a"><div class="title caf" style="top:250px">Kofeín</div></div>
+  <div class="ov" id="t4b"><div class="chip">Obsadený receptor</div><div class="arrow"></div></div>
+  <div class="ov" id="t5"><div class="title two">Tlmený signál<br><span class="ade">ospalosti</span></div></div>
+  <div class="ov" id="t6"><div class="shade"></div><div class="low">Kofeín nenahrádza<br><span class="caf">spánok.</span></div></div>
+</body>
+</html>
