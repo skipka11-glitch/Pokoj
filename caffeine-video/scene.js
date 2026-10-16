@@ -697,9 +697,9 @@ function updateMicro(t) {
   arrows.forEach(a => updateArrow(a, u));
 
   // tags
-  placeTag(tags.ade, (molPos.get('A0') || v3()).clone().add(v3(.2, .45, 0)), microCam, win(u, 1.4, 4.4, .6, .4), 130, -38);
-  placeTag(tags.rec, receptors[1].dock.clone().add(v3(.75, .6, .2)), microCam, win(u, 1.8, 4.3, .6, .4), 110, 28);
-  placeTag(tags.act, receptors[0].dock.clone().add(v3(0, -.5, .9)), microCam, win(u, 3.7, 5.0, .4, .3), 110, 30);
+  placeTag(tags.ade, (molPos.get('A0') || v3()).clone().add(v3(.2, .45, 0)), microCam, win(u, 1.4, 3.35, .6, .35), 130, -38);
+  placeTag(tags.rec, receptors[1].dock.clone().add(v3(.75, .6, .2)), microCam, win(u, 1.8, 3.5, .5, .3), 110, 28);
+  placeTag(tags.act, receptors[0].dock.clone().add(v3(0, -.5, .9)), microCam, win(u, 3.6, 5.0, .4, .3), 110, 30);
   placeTag(tags.caf, (molPos.get('C2') || v3()).clone().add(v3(-.1, .45, 0)), microCam, win(u, 4.6, 6.6, .5, .4), 120, -42);
   placeTag(tags.blk, receptors[1].dock.clone().add(v3(.45, .3, .3)), microCam, win(u, 6.0, 12.1, .6, .4), 160, -30);
 }
