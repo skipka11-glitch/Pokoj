@@ -18,5 +18,6 @@
 
 ## Použité v NOS — Epizóda 1
 - Titulok „10 minutes / *earlier*“: najprv rovným rezom „10 minutes“, o 0,6 s kurzívou „earlier“, vľavo dole, s jemným tieňom.
+- Vysvetľujúci titulok pri Mary (scéna 4, pred jej replikou): „the scent was wrong / *and only she noticed*“.
 - Koncový nápis „NOS“ písmom Playfair Display.
 - Generátor titulkov: `tools/titulok.py`.
