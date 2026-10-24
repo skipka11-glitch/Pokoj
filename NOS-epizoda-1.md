@@ -1,7 +1,7 @@
 # NOS — Epizóda 1: „Čo cítiš?“ — scenár a video prompty
 Formát: **9:16** (TikTok / Reels / Shorts) | Dĺžka: **cca 2 min** | Klipy: **7** (6 scén + 1 insert)
 
-> **Moje rozhodnutia (dajú sa zmeniť):** dialógy sú po anglicky s prízvukmi, lebo Seedance s nimi dáva najlepšie výsledky. Slovenský preklad je v scenári v zátvorke a hodí sa na titulky. Prompty sú po anglicky, aby im model čo najlepšie rozumel. Mená postáv som overil vyhľadávaním a žiadna verejne známa osoba s nimi nevyšla.
+> **Moje rozhodnutia (dajú sa zmeniť):** dialógy sú po anglicky s prízvukmi, lebo Seedance s nimi dáva najlepšie výsledky. Slovenský preklad je v scenári v zátvorke a hodí sa na titulky. Video prompty sú po anglicky a napísané podľa skillu Seedance 2.5 Prompt Writer. Mená postáv som overil vyhľadávaním a žiadna verejne známa osoba s nimi nevyšla.
 
 ---
 
@@ -229,278 +229,432 @@ Mare sa rozšíria oči. Strih do čiernej.
 ---
 
 ## Video prompty (Seedance 2.5)
+*Napísané podľa skillu Seedance 2.5 Prompt Writer. Každý prompt je samostatný a nepredpokladá, že model pozná predchádzajúce klipy. FOV je zadané iba hodnotami z pevnej tabuľky v stupňoch, všetko je formulované pozitívne, rýchlosti sú v km/h a vyváženie bielej v Kelvinoch. Štýl je rozdelený do blokov, ktorých sa týka. Hlas je opísaný iba raz, v riadku tagu. Seedance 2.5 si ho pamätá spolu s character sheetom, preto vždy použi tú istú referenciu.*
 
-### Klip 1 — Sc. 1 — Pád (8 s)
+### Klip 1 — Pád (8 s)
 Referencie: @PerfumeLab, @Mara, @Helene
 ```
-SCENE CONTEXT: The hook. A silver tray of amber glass perfume vials falls from a young cleaner's hands and shatters on a marble floor in slow motion, in a luxurious Parisian perfume laboratory. The director of the house spins around in fury. This is the loudest moment of the episode, shown before we know why.
+SCENE CONTEXT
+In a luxurious Parisian perfume laboratory by day, a silver tray of twelve amber glass vials falls from a young cleaner's hands and shatters on the black-and-white marble floor. At the right end of the long marble table, the director of the house spins toward the sound and shouts.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the location; the room is identical to the reference.
-@Mara — 24, cleaner, grey work dress, white apron, light grey headscarf, white sneakers. Only her hands, arms and lower body are seen falling at the edge of frame; face, hair and outfit 100% match the reference.
-@Helene — 50, director, ivory pantsuit, pearl earrings, dark sleek bob. Voice: speaks English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. Face, hair and outfit 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory. 100% matches the reference.
+@Mara: 24, cleaner, grey work dress, white apron, light grey cotton headscarf, white sneakers; framed from the shoulders down at the right edge, hands open after losing the tray. 100% matches the reference.
+@Helene: 50, director of the house, ivory pantsuit, pearl earrings, sleek dark bob, black tablet in her left hand. Voice: English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. 100% matches the reference.
 
-LOCATION MAP: Black-and-white checkerboard marble floor. Long white marble table runs across the middle of the room; the curved wall of amber bottles behind it; tall arched windows on the left with daylight; double oak door on the right. Camera is low, near the floor, between the door and the table.
+LOCATION MAP
+Foreground: polished black-and-white checkerboard marble floor with mirror-like reflections. Midground: a long white marble table running left to right, three brass pendant lamps above it. Background: a curved wooden wall of hundreds of small amber bottles. Two tall arched windows with sheer curtains on the left wall carry the daylight key; a tall double oak door stands on the right wall. The camera works in the open floor between the door and the table, on the shadow side, its axis pointing toward the table.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. A silver tray tilted in mid-air in the upper third of frame, twelve small amber glass vials lifting off it. Mara's grey dress and white apron blurred at the right edge, her hands open, reaching. Floor fills the lower half.
+FIRST FRAME / BLOCKING
+The silver tray hangs tilted in mid-air in the upper third of the frame, twelve amber vials lifting off it and turning. Mara's grey dress and white apron sit soft at the right edge, her hands open and reaching. The marble floor and its reflections fill the lower half. Everything is already moving in frame one.
 
-FORMAT MODE: Sequence. 0.0s–6.0s slow motion (high-speed, about 120 fps look). Hard cut at 6.0s to real time.
+FORMAT MODE
+Timed multishot, total 8.0 seconds. Cuts only at the specified points, the camera does not cut on its own.
 
-OPTICS AND CAMERA: Shot 1 (0.0–6.0s): low angle 15 cm above the floor, 35mm lens, about 55° field of view, camera static, then a slight push-in as the glass hits the floor to make the impact feel bigger. Shot 2 (6.0–8.0s): medium close-up of Helene at the table, eye level, 85mm, about 28° field of view, static.
+OPTICS
+Segment 1: wide 63° FOV, the glass and floor large in frame, the background in soft focus. Segment 2: MCU on Helene at 29° portrait compression, the bottle wall in soft bokeh behind her. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–2.5s: the tray rotates slowly in the air; vials separate and turn, catching window light; the light grey headscarf drifts down behind them.
-2.5s–4.5s: the vials hit the marble one after another and burst; amber liquid splashes outward in crown shapes; shards scatter across the black and white squares.
-4.5s–6.0s: the silver tray lands flat with a heavy bounce; the headscarf settles among the shards.
-6.0s–8.0s: Helene turns sharply toward camera, eyes wide, jaw tight, and says loudly and fast: "Who let her in here?!"
-Hard cut to black at 8.0s.
+CAMERA
+Segment 1: camera 15 cm above the floor, 2 meters from the tray. It holds still, then pushes in at 1 km/h as the glass meets the marble so the impact swells. Segment 2: eye level, 2.5 meters from Helene, locked off. Tonal character: wide latitude, soft highlight roll-off on the glass glints, clean deep blacks in the floor tiles.
 
-PHYSICS: Glass shatters into realistic small shards; liquid behaves like thin oil, spreading and beading on polished marble; the tray is heavy metal and bounces once; the scarf is light cotton and floats.
+ACTION
+0.0s to 2.5s — the tray rotates slowly in the air; the vials separate and spin, each catching a spark of window light; the light grey headscarf slips free and drifts down behind them.
+2.5s to 4.5s — the vials strike the marble one after another and burst; amber liquid throws out crown-shaped splashes; small shards skitter across the black and white squares, mirrored in the polished floor.
+4.5s to 6.0s — the silver tray lands flat, bounces once with weight and settles; the headscarf comes to rest among the shards.
+6.0s HARD CUT
+6.0s to 8.0s — Helene turns sharply toward camera and says loudly and fast: "Who let her in here?!"
+8.0s HARD CUT to black.
 
-LIGHTING: Soft daylight from the tall windows on the left side of the room, warm glow from the brass pendant lamps above the table. Highlights glint in the amber glass and the liquid.
+PERFORMANCE
+Helene: her brows snap down, nostrils flare, lips pull thin on the word "her". Her eyes are alive, with crisp catch-lights from the windows, and a faint flush rises on her neck. Pore-level skin realism.
 
-AUDIO: Slow-motion: deep muffled glass breaks, a low whoosh, a single high crystalline ring. Real time: Helene's line, room tone. No music.
+PHYSICS
+The glass breaks into small sharp shards that throw contact shadows. The liquid behaves like light oil: it spreads and beads on the polished marble and reflects the pendant lamps. The metal tray has real mass and bounces once. The cotton scarf is light and floats on air drag.
 
-POSITIVE LOCKS: The room is identical to @PerfumeLab. Only Helene speaks; only the quoted line is spoken. Mara's face is not shown in this clip. No other people appear. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical framing throughout.
+LIGHTING
+Key: soft daylight through the two arched windows on the left wall, 5600K, raking across the floor and faces from camera-left. Practical fill: three brass pendant lamps above the table glowing 3200K, adding amber highlights to the glass and the liquid. White balance fixed at 4800K. Haze 5%, visible in the window beams at 6 meters depth.
+
+AUDIO
+Segment 1: deep muffled glass bursts, a low air whoosh, one high crystalline ring that hangs. Segment 2: Helene's line over quiet room tone. The score stays silent.
+
+STYLE
+Photoreal cinematic drama, natural skin texture, fine organic film grain, soft prime-lens falloff, amber glass glowing against cool marble.
+
+OUTPUT SETTINGS
+9:16 vertical. Segment 1 in slow motion from start to finish, 120 fps look played at 24 fps. Segment 2 in real time at 24 fps.
+
+POSITIVE LOCKS
+The room is identical to @PerfumeLab. Mara stays framed from the shoulders down at the right edge of segment 1. Helene fills segment 2 alone against the soft bottle wall. Helene speaks the only line, exactly as quoted. Clean picture, image only.
 ```
 
-### Klip 2 — Sc. 2 — Hodnotenie (24 s)
+### Klip 2 — Hodnotenie (24 s)
 Referencie: @PerfumeLab, @Lucien, @Theo, @Helene, @Investors
 ```
-SCENE CONTEXT: A perfume evaluation before investors, three days before launch. Master perfumer Lucien smells a paper strip and describes the new fragrance with total confidence, but he is secretly reading the notes from his assistant Theo's notebook. Director Helene presses him; he answers half a second too late. Theo calls for the samples. The scene feels elegant on the surface and tense underneath.
+SCENE CONTEXT
+A perfume evaluation by day in a Parisian perfume laboratory. Master perfumer Lucien stands at the long marble table and describes a new fragrance to two seated investors while his eyes quietly flick to the open notebook his assistant Theo holds behind him. The director, Helene, presses him from the end of the table and he answers half a beat late.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the location; the room is identical to the reference.
-@Lucien — 58, master perfumer, charcoal three-piece suit, white open-collar shirt, navy pocket square, silver half-moon glasses on a chain, holding a fan of white paper perfume strips. Voice: speaks English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words. Face, hair and outfit 100% match the reference.
-@Theo — 32, his assistant, black turtleneck, black trousers, holding a small brown leather notebook. Voice: speaks English with a light French accent, smooth mid-pitched voice, quick and charming, a smile always audible. Face, hair and outfit 100% match the reference.
-@Helene — 50, director, ivory pantsuit, pearl earrings, dark sleek bob, holding a black tablet. Voice: speaks English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. Face, hair and outfit 100% match the reference.
-@Investors — the grey-bearded man in a navy blazer and the platinum-haired woman in black; both seated, holding paper strips; they do not speak in this clip. Faces and outfits 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory. 100% matches the reference.
+@Lucien: 58, master perfumer, charcoal three-piece suit, white open-collar shirt, silver half-moon glasses on a chain, a fan of thin white paper perfume strips in his right hand. Voice: English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words. 100% matches the reference.
+@Theo: 32, assistant, black turtleneck, small brown leather notebook in both hands. Voice: English with a light French accent, smooth mid-pitched, quick and charming, a smile always audible. 100% matches the reference.
+@Helene: 50, director, ivory pantsuit, pearl earrings, sleek dark bob, black tablet. Voice: English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. 100% matches the reference.
+@Investors: the grey-bearded man in a navy blazer and the platinum-haired woman in black, seated, each holding a paper strip, silent. 100% matches the reference.
 
-LOCATION MAP: Long white marble table across the middle of the room. Investors seated on the far side of the table, facing camera, man on the left, woman on the right. Helene stands at the right end of the table. Lucien stands on the near side, center-left, back three-quarters to camera. Theo stands one step behind Lucien's left shoulder. A brown leather bag lies on the floor beside the near-left table leg. Double oak door on the right wall. Curved wall of amber bottles behind the investors.
+LOCATION MAP
+Foreground: Lucien on the near side of the table, center-left, three-quarters away from camera; Theo one step behind his left shoulder. A brown leather bag lies on the floor beside the near-left table leg. Midground: the long white marble table running left to right, the two investors seated on the far side facing camera (man left, woman right), Helene standing at the right end. Background: the curved wall of amber bottles. Window key from the left wall; double oak door on the right wall. The camera works from the right of the window axis, on the shadow side.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. Medium shot over Lucien's right shoulder: Lucien in the left foreground lifting a paper strip to his nose; the two investors seated behind the table in the middle of frame; Theo's shoulder and notebook visible at the left edge.
+FIRST FRAME / BLOCKING
+Over Lucien's right shoulder: Lucien in the left foreground already lifting a paper strip toward his nose, the two investors centered behind the table watching him, Theo's shoulder and notebook at the left edge. Rule of thirds, Lucien's eye-line toward the investors.
 
-FORMAT MODE: Sequence with hard cuts at 6.0s, 11.0s, 15.0s, 20.0s. Real time.
+FORMAT MODE
+Timed multishot, total 24.0 seconds. Cuts only at the specified points, the camera does not cut on its own.
 
-OPTICS AND CAMERA:
-Shot 1 (0.0–6.0s): medium over-the-shoulder, 50mm, about 40° FOV, chest height, slow push-in toward Lucien's face as he smells, to pull us into his performance.
-Shot 2 (6.0–11.0s): close-up of Lucien's face and eyes, 85mm, about 28° FOV, eye level, static.
-Shot 3 (11.0–15.0s): medium shot of Helene at the end of the table, 50mm, about 40° FOV, static.
-Shot 4 (15.0–20.0s): close-up of Lucien, 85mm, static, then a tiny drift right to reveal Theo behind him.
-Shot 5 (20.0–24.0s): medium-wide toward the double door, 35mm, about 55° FOV, Theo turning toward it in the foreground; the brown bag on the floor visible in the lower left of frame.
+OPTICS
+Segment 1: MS over-the-shoulder, 47°. Segment 2: CU on Lucien's face, 29°. Segment 3: MS on Helene, 47°. Segment 4: CU on Lucien, 29°. Segment 5: WS toward the double door, 63°. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–2.5s: Lucien lifts the strip to his nose, closes his eyes, inhales slowly.
-2.5s–6.0s: he opens his eyes and says slowly, with pauses: "Bergamot… iris… and a warm amber heart."
-6.0s–8.0s: close-up: his eyes flick down and to the left for half a second, toward the notebook, then back up. A tiny tension in his jaw.
-8.0s–11.0s: he gives a calm, proud nod. Off-screen, the platinum-haired investor gives a delighted small "mm".
-11.0s–15.0s: Helene, not looking up from her tablet, then looking straight at him, fast and cold: "Three days to launch, Lucien. Is it ready?"
-15.0s–16.0s: Lucien holds still; a half-second too long.
-16.0s–18.0s: he answers softly, with a controlled smile: "It is perfect."
-18.0s–20.0s: behind him, Theo's polite half-smile, eyes cold, closing the notebook.
-20.0s–24.0s: Theo turns toward the double door and calls out, bright and quick: "Bring the samples!"
+CAMERA
+Segment 1: chest height, 1.5 meters behind Lucien, slow push-in at 0.5 km/h toward his face as he smells, drawing us into his performance. Segment 2: eye level, 1.2 meters, locked off. Segment 3: eye level, 2.5 meters, locked off. Segment 4: eye level, 1.2 meters, truck 20 cm right at 0.5 km/h to reveal Theo behind his shoulder. Segment 5: chest height, Theo in the left foreground, the door centered, locked off. Tonal character: wide latitude, soft highlight roll-off on white marble and white shirt.
 
-PHYSICS: Thin paper strips flex slightly in Lucien's fingers. The glasses on the chain swing a little when he moves. Fabric moves naturally.
+ACTION
+0.0s to 2.5s — Lucien lifts the strip to his nose, closes his eyes, inhales slowly.
+2.5s to 6.0s — he opens his eyes and says slowly: "Bergamot… iris… and a warm amber heart."
+6.0s HARD CUT
+6.0s to 8.0s — his eyes flick down-left toward Theo's notebook for half a second, then return to the investors; a small muscle tightens at his jaw.
+8.0s to 11.0s — he gives a calm, proud nod; the platinum-haired investor answers with a delighted small "mm".
+11.0s HARD CUT
+11.0s to 15.0s — Helene lifts her eyes from the tablet straight to Lucien and says fast and cold: "Three days to launch, Lucien. Is it ready?"
+15.0s HARD CUT
+15.0s to 16.0s — Lucien holds perfectly still for one beat too long.
+16.0s to 18.0s — he answers softly with a controlled smile: "It is perfect."
+18.0s to 20.0s — as the camera trucks right, Theo appears behind him with a polite half-smile and cold eyes, closing the notebook.
+20.0s HARD CUT
+20.0s to 24.0s — Theo turns toward the double door and calls out, bright and quick: "Bring the samples!"
 
-LIGHTING: Soft daylight from the tall windows on the left side of the room; warm glow from three brass pendant lamps above the table; same logic in every shot.
+PERFORMANCE
+Lucien: composed surface, tension only in micro-movements: a half-second eye flick, a swallow before "It is perfect", fingers squeezing the strips. Helene: unblinking stare, chin slightly raised. Theo: the smile reaches his mouth and stops below his eyes. Pore-level skin, living catch-lights from the windows, visible breath before each line.
 
-AUDIO: Quiet room tone, the faint tick of a clock, paper rustle, the investors' chairs creak. No music.
+PHYSICS
+The thin paper strips flex in Lucien's fingers. The glasses chain swings 2 cm with each movement of his head. Wool and silk fabric fold naturally. The investors' chairs creak with their weight.
 
-POSITIVE LOCKS: The room is identical to @PerfumeLab. Only the quoted lines are spoken, by the named characters. The investors stay seated and silent. No other people appear. Characters do not change positions between cuts except as described. The brown bag stays on the floor by the near-left table leg. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical.
+LIGHTING
+Key: soft daylight through the arched windows on the left wall, 5600K, raking across the faces from camera-left. Practical fill: three brass pendant lamps above the table, 3200K, warm highlights on the marble and the bottle wall. White balance fixed at 4800K. Haze 5%, visible in the window beams at 6 meters depth. The same light logic holds in every segment.
+
+AUDIO
+Quiet room tone, a faint clock tick, paper rustle, chair creaks, the lines as written. The score stays silent.
+
+STYLE
+Photoreal cinematic drama, natural skin texture, fine organic film grain, soft prime-lens falloff, warm brass and amber glass against cool white marble.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The room is identical to @PerfumeLab. The investors stay seated and silent apart from the woman's single "mm". Only the quoted lines are spoken, each by the named character. Every character holds the same position across all cuts. The brown bag stays on the floor by the near-left table leg. Clean picture, image only.
 ```
 
-### Klip 3 — Sc. 3 — Mara vchádza (13 s)
+### Klip 3 — Mara vchádza (13 s)
 Referencie: @PerfumeLab, @Mara, @Helene, @Theo, @Investors
 ```
-SCENE CONTEXT: The turn. A young cleaner, Mara, enters the elegant lab carrying a silver tray of perfume vials. Everyone turns to look at her and she shrinks under their eyes. She hurries, catches her sneaker on the strap of a leather bag on the floor, and the tray flies out of her hands.
+SCENE CONTEXT
+In a Parisian perfume laboratory by day, a young cleaner, Mara, enters through the double oak door carrying a silver tray of amber vials. Everyone at the marble table turns to look at her; she hurries, catches her sneaker on the strap of a leather bag on the floor, and the tray flies out of her hands.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the location; identical to the reference.
-@Mara — 24, cleaner, plain grey short-sleeved work dress, white apron, light grey headscarf tied at the nape, white sneakers, carrying a silver tray of twelve small amber glass vials with both hands. She is a cleaner, never a perfumer, no lab coat. Face, hair and outfit 100% match the reference.
-@Helene — 50, director, ivory pantsuit, standing at the right end of the table. Face, hair and outfit 100% match the reference.
-@Theo — 32, black turtleneck, standing near the left side of the table. Face, hair and outfit 100% match the reference.
-@Investors — two seated investors on the far side of the table, silent. Faces and outfits 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory. 100% matches the reference.
+@Mara: 24, cleaner, grey short-sleeved work dress, white apron, light grey headscarf tied at the nape, white sneakers, a silver tray of twelve small amber glass vials held in both hands. 100% matches the reference.
+@Helene: 50, director, ivory pantsuit, standing at the right end of the table. 100% matches the reference.
+@Theo: 32, black turtleneck, standing near the left side of the table. 100% matches the reference.
+@Investors: the two seated investors on the far side of the table, watching. 100% matches the reference.
 
-LOCATION MAP: Double oak door on the right wall. Long white marble table across the middle. A brown leather bag lies on the floor beside the near-left table leg, its strap stretched across Mara's path. Checkerboard marble floor.
+LOCATION MAP
+Foreground: polished checkerboard marble floor; a brown leather bag lies beside the near-left table leg, its strap stretched across the walking path. Midground: the long white marble table, Helene at its right end, Theo near its left side, investors seated behind it. Background: the curved wall of amber bottles. The double oak door is on the right wall; window key from the left wall.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. Medium-wide from inside the room toward the door: the double oak door, closed, center frame; the end of the marble table at the left edge.
+FIRST FRAME / BLOCKING
+WS from beside the table toward the right wall: the double oak door already swinging open in the center of the frame, Mara stepping through it with the tray, eyes lowered; the end of the marble table and Helene's ivory sleeve at the left edge.
 
-FORMAT MODE: Sequence with hard cuts at 4.0s, 7.0s, 10.0s. Real time; the last shot ends on a freeze-like peak at 13.0s.
+FORMAT MODE
+Timed multishot, total 13.0 seconds. Cuts only at the specified points, the camera does not cut on its own.
 
-OPTICS AND CAMERA:
-Shot 1 (0.0–4.0s): medium-wide, 35mm, about 55° FOV, chest height, static.
-Shot 2 (4.0–7.0s): close-up of Helene's face, 85mm, static.
-Shot 3 (7.0–10.0s): medium tracking shot, 50mm, camera moves backwards in front of Mara at her walking speed, to make us walk with her.
-Shot 4 (10.0–13.0s): low angle 30 cm above the floor, 35mm, about 55° FOV, static, framing the bag strap and her sneaker.
+OPTICS
+Segment 1: WS, 63°. Segment 2: CU on Helene, 29°. Segment 3: MS on Mara, 47°. Segment 4: detail-on-wide, 84°, right up against the bag strap so the strap and sneaker loom large and the room recedes into depth. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–1.5s: the double door opens inward; Mara steps in holding the tray, eyes lowered.
-1.5s–4.0s: she walks carefully, vials clinking softly; she glances up, sees everyone looking at her, and drops her eyes again.
-4.0s–7.0s: Helene looks her up and down, from the sneakers to the headscarf, one eyebrow rising, lips thinning.
-7.0s–10.0s: Mara speeds up, shoulders tense, breath shallow, the tray trembling slightly.
-10.0s–11.5s: her white sneaker catches the bag strap.
-11.5s–13.0s: she pitches forward, the tray leaves her hands and tips into the air. Hard cut at 13.0s.
+CAMERA
+Segment 1: chest height, 4 meters from the door, locked off; the window light falls on Mara as side light from camera-left. Segment 2: eye level, 1.2 meters, locked off. Segment 3: chest height, the camera tracks backwards in front of Mara at her walking speed of 3 km/h, so we walk with her. Segment 4: 30 cm above the floor, beside the bag, locked off.
 
-PHYSICS: Small amber vials rattle and clink on the metal tray. The strap pulls taut and the bag shifts a few centimeters. Her body falls forward naturally, hands opening.
+ACTION
+0.0s to 1.5s — the door swings inward; Mara steps in holding the tray, eyes lowered.
+1.5s to 4.0s — she walks carefully at 2 km/h, the vials clinking softly; she glances up, meets the room's eyes, and drops her gaze again.
+4.0s HARD CUT
+4.0s to 7.0s — Helene looks her up and down, from the sneakers to the headscarf; one eyebrow rises, her lips thin.
+7.0s HARD CUT
+7.0s to 10.0s — Mara speeds up to 3 km/h, shoulders rising, breath shallow, the tray trembling slightly in her hands.
+10.0s HARD CUT
+10.0s to 11.5s — her white sneaker hooks under the bag strap; the strap pulls taut.
+11.5s to 13.0s — she pitches forward, her hands open, and the tray tips up into the air out of frame. 13.0s HARD CUT.
 
-LIGHTING: Soft daylight from the tall windows on the left side of the room; warm brass pendant light above the table; same logic in every shot.
+PERFORMANCE
+Mara: eyes on the floor, chin tucked, quick swallow, fingers white at the tray handles, a short gasp as she trips. Helene: a slow, cold top-to-bottom look, unblinking. Pore-level skin realism and living catch-lights.
 
-AUDIO: Door creak, sneaker squeak on marble, glass clinking, a sharp intake of breath from Mara. No dialogue. No music.
+PHYSICS
+The small amber vials rattle and clink against the metal tray. The bag drags 5 cm when the strap pulls taut. Mara's body falls forward with real momentum, arms flying out.
 
-POSITIVE LOCKS: The room is identical to @PerfumeLab. Nobody speaks. Mara wears her headscarf throughout this clip. No other people appear. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical.
+LIGHTING
+Key: soft daylight through the arched windows on the left wall, 5600K. Practical fill: three brass pendant lamps above the table, 3200K. White balance fixed at 4800K. Haze 5%, visible in the window beams at 6 meters depth. The same light logic holds in every segment.
+
+AUDIO
+The door creaks, sneakers squeak on marble, glass clinks, Mara gasps sharply. Only these sounds carry the scene. The score stays silent.
+
+STYLE
+Photoreal cinematic drama, natural skin texture, fine organic film grain, soft prime-lens falloff.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The room is identical to @PerfumeLab. Mara wears her headscarf throughout and is dressed as a cleaner in her grey work dress and white apron. Everyone else holds their position at the table. The room holds only the named characters. Clean picture, image only.
 ```
 
-### Klip 4 — Sc. 4 — Črepiny (24 s)
+### Klip 4 — Črepiny (24 s)
 Referencie: @PerfumeLab, @MaraNoScarf, @Lucien, @Helene, @Theo, @Investors
 ```
-SCENE CONTEXT: Mara kneels among broken glass, apologizing and picking up shards with shaking hands. Then she stops, breathes in, and her whole face changes: she names every ingredient of the fragrance from the spilled mix and says exactly what is wrong with the formula. The grey-bearded investor checks his strip again and agrees. Everyone freezes; each person reads this moment differently.
+SCENE CONTEXT
+In a Parisian perfume laboratory by day, a young cleaner kneels among broken amber glass on the marble floor, apologizing as she gathers shards. She stops, breathes in, and with sudden certainty names every ingredient of the spilled fragrance and the flaw in its formula; a seated investor checks his strip and agrees, and the room freezes.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the location; identical to the reference.
-@MaraNoScarf — 24, cleaner, grey work dress, white apron, no headscarf, tight low dark bun with loose strands, kneeling on the floor. Voice: speaks English with a light Slovak accent, soft and slightly husky, low-pitched, slow and careful, rounded vowels. Face, hair and outfit 100% match the reference.
-@Lucien — 58, charcoal three-piece suit, standing on the near side of the table, holding a fan of paper strips. Silent in this clip. Face, hair and outfit 100% match the reference.
-@Helene — 50, ivory pantsuit, standing at the right end of the table. Silent in this clip. Face, hair and outfit 100% match the reference.
-@Theo — 32, black turtleneck, holding his notebook, standing behind Lucien's left shoulder. Silent in this clip. Face, hair and outfit 100% match the reference.
-@Investors — the grey-bearded man in a navy blazer speaks one line. Voice: speaks English with a neutral British accent, low, gravelly, slow and dry. The platinum-haired woman stays silent. Faces and outfits 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory. 100% matches the reference.
+@MaraNoScarf: 24, cleaner, grey work dress, white apron, bare head with a tight low dark bun and loose strands, kneeling on the floor. Voice: English with a light Slovak accent, soft and slightly husky, low-pitched, slow and careful, rounded vowels. 100% matches the reference.
+@Lucien: 58, charcoal three-piece suit, silver glasses on a chain, a fan of white paper strips in his right hand, standing at the near side of the table, silent. 100% matches the reference.
+@Helene: 50, ivory pantsuit, black tablet, standing at the right end of the table, silent. 100% matches the reference.
+@Theo: 32, black turtleneck, leather notebook, standing behind Lucien's left shoulder, silent. 100% matches the reference.
+@Investors: the grey-bearded man in a navy blazer speaks one line; the platinum-haired woman watches in silence. The man's voice: English with a neutral British accent, low, gravelly, slow and dry. 100% matches the reference.
 
-LOCATION MAP: Mara kneels on the checkerboard floor in the open space between the double door (right) and the near side of the table, about two meters from Lucien. Shards and amber liquid around her, the silver tray beside her, the light grey headscarf lying among the shards. Investors seated behind the table.
+LOCATION MAP
+Foreground: Mara kneeling on the checkerboard floor between the double door (right wall) and the near side of the table, 2 meters from Lucien. Around her: amber liquid, small shards, the silver tray at her right knee, a light grey headscarf lying among the shards. Midground: the marble table with Lucien and Theo on the near side, Helene at the right end, investors seated beyond. Background: the curved wall of amber bottles. Window key from the left wall.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. High angle medium shot looking down on Mara kneeling in the glass, shards all around her, the tray at her right knee, the headscarf in the lower left.
+FIRST FRAME / BLOCKING
+High angle looking down on Mara already picking up shards, the glass spread around her, the tray at her right knee, the headscarf in the lower left of the frame. She is small in the frame, the marble floor large around her.
 
-FORMAT MODE: Sequence with hard cuts at 5.0s, 14.0s, 18.0s, 21.0s. Real time.
+FORMAT MODE
+Timed multishot, total 24.0 seconds. Cuts only at the specified points, the camera does not cut on its own.
 
-OPTICS AND CAMERA:
-Shot 1 (0.0–5.0s): high angle medium, 35mm, about 55° FOV, static, to make her look small.
-Shot 2 (5.0–14.0s): close-up of Mara at her eye level, 85mm, about 28° FOV, very slow push-in as her face changes, to follow her confidence growing.
-Shot 3 (14.0–18.0s): medium shot of the grey-bearded investor at the table, 50mm, static.
-Shot 4 (18.0–21.0s): reaction cut: medium shot of Helene, then quick pan to Theo, 50mm.
-Shot 5 (21.0–24.0s): extreme close-up of Lucien's hand holding the paper strips, 100mm, static.
+OPTICS
+Segment 1: MS from a high angle, 63°. Segment 2: CU on Mara, 29°. Segment 3: MS on the grey-bearded investor, 47°. Segment 4: MS on Helene, 47°. Segment 5: MCU on Theo, 29°. Segment 6: ECU on Lucien's hand, 12°. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–3.0s: Mara picks up shards with trembling fingers, glancing up fearfully, and says, breaking: "I'm sorry… I'm so sorry…"
-3.0s–5.0s: she reaches for a soaked paper strip lying in the liquid.
-5.0s–7.0s: close-up: she stops; her nostrils widen slightly as she breathes in; her eyes lose focus, then sharpen.
-7.0s–14.0s: she lifts the strip, and speaks quietly, almost to herself, but completely sure, with small pauses: "Bergamot. Iris. Ambrox… too much. Almost double. It's choking the heart."
-14.0s–15.5s: the grey-bearded investor slowly brings his own strip to his nose again.
-15.5s–18.0s: he lowers it and says, dry and low: "She's right."
-18.0s–19.5s: Helene freezes, lips parted, the tablet lowering in her hand.
-19.5s–21.0s: Theo stares at Mara, his smile gone, eyes narrowing.
-21.0s–24.0s: Lucien's fingers tighten; the fan of paper strips trembles visibly.
+CAMERA
+Segment 1: 2.5 meters above the floor, angled down, locked off, to make her small. Segment 2: at her kneeling eye level, 1 meter away, a very slow push-in at 0.3 km/h as her face changes, following her confidence as it grows. Segments 3 to 6: eye level, locked off, each reaction held still. The camera works from the right of the window axis, on the shadow side.
 
-PHYSICS: Small shards glint; liquid beads on the marble; the soaked paper strip is darker and slightly limp. Loose strands of Mara's hair move with her breath.
+ACTION
+0.0s to 3.0s — Mara gathers shards with trembling fingers, glances up fearfully, and says, her voice breaking: "I'm sorry… I'm so sorry…"
+3.0s to 5.0s — she reaches for a soaked paper strip lying in the liquid.
+5.0s HARD CUT
+5.0s to 7.0s — she stops; her nostrils widen as she breathes in; her eyes lose focus, then sharpen.
+7.0s to 14.0s — she lifts the strip and speaks quietly, almost to herself, completely sure, with small pauses: "Bergamot. Iris. Ambrox… too much. Almost double. It's choking the heart."
+14.0s HARD CUT
+14.0s to 15.5s — the grey-bearded investor slowly brings his own strip back to his nose.
+15.5s to 18.0s — he lowers it and says, dry and low: "She's right."
+18.0s HARD CUT
+18.0s to 19.5s — Helene freezes, lips parted, the tablet sinking in her hand.
+19.5s HARD CUT
+19.5s to 21.0s — Theo stares at Mara, his smile gone, eyes narrowing.
+21.0s HARD CUT
+21.0s to 24.0s — Lucien's fingers tighten and the fan of paper strips trembles visibly.
 
-LIGHTING: Soft daylight from the tall windows on the left side of the room; warm brass pendant light above the table; Mara's face lit softly from the window side. Same logic in every shot.
+PERFORMANCE
+Mara transforms on camera: first hunched shoulders, wet eyes, rapid shallow breath; then on the inhale her shoulders drop, her brow smooths, her gaze steadies and her voice lowers and slows. The investor gives a slow, impressed blink. Helene's jaw slackens a few millimeters. Theo's lips press flat. Pore-level skin realism, a capillary flush on Mara's cheeks, living catch-lights.
 
-AUDIO: Tiny glass clinks, her breathing, deep room silence after "She's right". No music.
+PHYSICS
+Tiny shards glint and click as she moves them. The liquid beads on the marble, mirroring the pendant lamps. The soaked strip is darker and limp at the tip. Loose strands of Mara's hair stir with her breath.
 
-POSITIVE LOCKS: The room is identical to @PerfumeLab. Only the quoted lines are spoken, by Mara and the grey-bearded investor. Mara has no headscarf in this clip; the scarf lies on the floor. Mara is a cleaner, never mistaken for a perfumer; no lab coat. No other people appear. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical.
+LIGHTING
+Key: soft daylight through the arched windows on the left wall, 5600K, lighting Mara's face from the window side. Practical fill: three brass pendant lamps above the table, 3200K. White balance fixed at 4800K. Haze 5%, visible in the window beams at 6 meters depth. The same light logic holds in every segment.
+
+AUDIO
+Tiny glass clinks, Mara's breathing, the lines as written, then deep room silence after "She's right." The score stays silent.
+
+STYLE
+Photoreal cinematic drama, natural skin texture, fine organic film grain, soft prime-lens falloff, amber glass glinting on cool marble.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The room is identical to @PerfumeLab. Mara's head stays bare, hair in the tight low bun; the headscarf lies on the floor. Mara is dressed as a cleaner in her grey work dress and white apron and stays kneeling throughout. Only Mara and the grey-bearded investor speak, only the quoted lines. Everyone holds the same position across all cuts. Clean picture, image only.
 ```
 
 ### Klip 4a — Insert — Théov zápisník (4 s)
 Referencie: @PerfumeLab, @Theo, @Lucien
 ```
-SCENE CONTEXT: Insert. Theo secretly holds his open notebook so that only Lucien can read it; Lucien's eyes flick down to it. This plants the secret.
+SCENE CONTEXT
+In a Parisian perfume laboratory by day, an assistant holds a small open notebook low at his hip, angled so that only the man in front of him can read it.
 
-ACTIVE REFERENCES: @Theo — black turtleneck, hands holding a small brown leather notebook; face not needed, hands and sleeves 100% match the reference. @Lucien — charcoal suit sleeve and silver glasses chain visible at the edge; 100% match the reference. @PerfumeLab — the background, blurred.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory, as a soft background. 100% matches the reference.
+@Theo: 32, black turtleneck sleeves, hands holding a small brown leather notebook; framed from the chest down. 100% matches the reference.
+@Lucien: 58, charcoal suit sleeve and silver glasses chain at the left edge, his hand holding white paper strips. 100% matches the reference.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. Extreme close-up over Lucien's shoulder: Theo's hands in the lower half holding the notebook open at hip height, tilted toward Lucien.
+LOCATION MAP
+Foreground: Theo's hands and the notebook at hip height. Midground: the edge of Lucien's charcoal sleeve. Background: the curved wall of amber bottles, fully dissolved into warm bokeh. Window key from camera-left.
 
-FORMAT MODE: Single shot, real time.
-OPTICS AND CAMERA: 100mm macro, about 20° FOV, shallow depth of field, static.
-ACTION TIMING: 0.0–2.0s: Theo's thumb slides the notebook open a little more, revealing handwritten lines in dark ink (illegible scribbles). 2.0–4.0s: Lucien's grey-suited hand, holding paper strips, enters the edge of frame and pauses.
-LIGHTING: Soft window daylight from the left, warm pendant glow.
-AUDIO: Paper rustle, room tone. No dialogue, no music.
-POSITIVE LOCKS: The handwriting is illegible scribbles, no readable words. No faces in frame. Clean picture without on-screen text. 9:16 vertical.
+FIRST FRAME / BLOCKING
+ECU over Lucien's shoulder: Theo's hands in the lower half of the frame, the notebook already open and tilted toward Lucien, handwritten lines in dark ink.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own. Total 4.0 seconds.
+
+OPTICS
+ECU, 12° tele-detail, very shallow depth of field, focus on the notebook page.
+
+CAMERA
+Hip height, 1 meter away, locked off.
+
+ACTION
+0.0s to 2.0s — Theo's thumb slides the notebook open a little wider, revealing more lines of handwriting.
+2.0s to 4.0s — Lucien's hand with the fan of paper strips enters the left edge of the frame and pauses beside the page.
+
+LIGHTING
+Soft daylight from camera-left, 5600K, warm 3200K pendant glow in the background bokeh. White balance fixed at 4800K.
+
+AUDIO
+Paper rustle, quiet room tone.
+
+STYLE
+Photoreal macro detail, fine organic film grain, leather and paper texture rendered at fiber level.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The handwriting is illegible scribbles in dark ink. Faces stay out of frame. Clean picture, image only.
 ```
 
-### Klip 5 — Sc. 5 — Rozhodnutie (26 s)
+### Klip 5 — Rozhodnutie (26 s)
 Referencie: @PerfumeLab, @MaraNoScarf, @Lucien, @Helene, @Theo, @Investors
 ```
-SCENE CONTEXT: Helene orders the cleaner out. Instead, Lucien puts down his strips, walks across the room over broken glass, and kneels beside Mara. She expects to be fired; he looks at her like a miracle. He asks her name, stands, and announces she is his new assistant. Theo, his current assistant, is humiliated. Opposite readings of the same moment drive the scene.
+SCENE CONTEXT
+In a Parisian perfume laboratory by day, the director orders a kneeling cleaner out. Instead, master perfumer Lucien walks across the broken glass, kneels beside her, asks her name, then stands and announces she is his new assistant, while his current assistant Theo stands humiliated behind the table.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the location; identical to the reference.
-@MaraNoScarf — 24, cleaner, grey work dress, white apron, no headscarf, tight low dark bun, kneeling among shards holding one soaked paper strip. Voice: speaks English with a light Slovak accent, soft and slightly husky, low-pitched, slow and careful, rounded vowels. Face, hair and outfit 100% match the reference.
-@Lucien — 58, charcoal three-piece suit, silver glasses on a chain, holding a fan of paper strips at the start. Voice: speaks English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words. Face, hair and outfit 100% match the reference.
-@Helene — 50, ivory pantsuit, at the right end of the table. Voice: speaks English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. Face, hair and outfit 100% match the reference.
-@Theo — 32, black turtleneck, holding his leather notebook, behind Lucien's left shoulder. Voice: speaks English with a light French accent, smooth mid-pitched voice, quick and charming, a smile always audible. Face, hair and outfit 100% match the reference.
-@Investors — seated, silent, watching. Faces and outfits 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the perfume laboratory. 100% matches the reference.
+@MaraNoScarf: 24, cleaner, grey work dress, white apron, bare head with a tight low dark bun, kneeling among shards, a soaked paper strip in her hand. Voice: English with a light Slovak accent, soft and slightly husky, low-pitched, slow and careful, rounded vowels. 100% matches the reference.
+@Lucien: 58, charcoal three-piece suit, silver glasses on a chain, a fan of white paper strips in his right hand at the start. Voice: English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words. 100% matches the reference.
+@Helene: 50, ivory pantsuit, black tablet, at the right end of the table. Voice: English with a crisp Parisian French accent, higher-pitched, fast and clipped, sharp consonants. 100% matches the reference.
+@Theo: 32, black turtleneck, leather notebook, near the left side of the table. Voice: English with a light French accent, smooth mid-pitched, quick and charming, a smile always audible. 100% matches the reference.
+@Investors: the two seated investors on the far side of the table, watching in silence. 100% matches the reference.
 
-LOCATION MAP: Mara kneels on the floor between the door (right) and the near side of the table, two meters from Lucien's starting position at the table. Shards, liquid, tray and headscarf around her. Helene at the right end of the table, Theo near the left, investors behind the table.
+LOCATION MAP
+Foreground: Mara kneeling on the checkerboard floor between the double door (right wall) and the near side of the table; shards, amber liquid, the silver tray and a light grey headscarf around her. Midground: the long marble table, Lucien at its near side center-left, Theo near its left side, Helene at its right end, the investors seated beyond. Background: the curved wall of amber bottles. Lucien's path runs around the near-right corner of the table and across 4 meters of floor to Mara. Window key from the left wall.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. Medium shot of Helene at the table end, Mara small and blurred kneeling in the lower right background.
+FIRST FRAME / BLOCKING
+MS on Helene at the end of the table, her arm already rising to point toward the door; Mara small and soft-focus, kneeling in the lower right background.
 
-FORMAT MODE: Sequence with hard cuts at 3.0s, 9.0s, 15.0s, 19.0s, 23.0s. Real time.
+FORMAT MODE
+Timed multishot, total 26.0 seconds. Cuts only at the specified points, the camera does not cut on its own.
 
-OPTICS AND CAMERA:
-Shot 1 (0.0–3.0s): medium on Helene, 50mm, static.
-Shot 2 (3.0–9.0s): low tracking shot at shoe level following Lucien's polished oxfords as he walks over the glass, 35mm, then tilting up his body from behind: back, shoulders, the glasses chain swinging, to build anticipation.
-Shot 3 (9.0–15.0s): two-shot at their kneeling eye level, profile, Lucien left, Mara right, 50mm, about 40° FOV, static.
-Shot 4 (15.0–19.0s): low angle medium on Lucien standing up and turning to the room, 35mm, slight push-in for authority.
-Shot 5 (19.0–23.0s): close-up on Theo, 85mm, static.
-Shot 6 (23.0–26.0s): extreme close-up on Theo's hands snapping the notebook shut, 100mm.
+OPTICS
+Segment 1: MS on Helene, 47°. Segment 2: low tracking shot, 63°. Segment 3: two-shot in profile, 47°. Segment 4: MS from a low angle, 63°. Segment 5: CU on Theo, 29°. Segment 6: ECU on the notebook, 12°. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–3.0s: Helene, cold and fast, pointing at the door: "Get her out. Now."
-3.0s–4.5s: Lucien lays the paper strips on the marble table.
-4.5s–9.0s: he walks around the table and across the room; glass crunches under his shoes; he does not hurry.
-9.0s–10.5s: he kneels beside Mara on one knee. She doesn't breathe; her shoulders rise; her eyes stay on the floor, waiting for the blow.
-10.5s–12.5s: he looks at her face with wonder and quiet hunger; softly, only to her: "What is your name?"
-12.5s–14.0s: she lifts her eyes to him, barely audible: "Mara."
-14.0s–15.0s: he holds her gaze one beat longer.
-15.0s–19.0s: he stands, turns to the room, and says calmly, with a long pause before her name: "From tomorrow… Mara is my assistant."
-19.0s–21.0s: Theo's smile freezes; he steps forward half a pace.
-21.0s–23.0s: Theo, still smiling, voice tight: "Your assistant… is me."
-23.0s–26.0s: silence; Lucien does not answer; Theo snaps the notebook shut with a sharp clap.
+CAMERA
+Segment 1: eye level, 2.5 meters, locked off. Segment 2: 20 cm above the floor, tracking behind Lucien's polished oxfords at his walking speed of 3 km/h, then tilting up his back from heels to shoulders as the glasses chain swings, building anticipation before he kneels. Segment 3: at kneeling eye level, 1.5 meters, profile, Lucien camera-left and Mara camera-right, locked off. Segment 4: 60 cm above the floor, looking up as Lucien rises, a push-in at 1 km/h for authority. Segments 5 and 6: eye level, locked off. The camera works from the right of the window axis, on the shadow side.
 
-PHYSICS: Glass crunches and small shards skitter under the shoes. The glasses chain swings with Lucien's steps. Suit fabric creases at the knee as he kneels.
+ACTION
+0.0s to 3.0s — Helene points at the door and says, cold and fast: "Get her out. Now."
+3.0s HARD CUT
+3.0s to 4.5s — Lucien lays the paper strips on the marble table.
+4.5s to 9.0s — he walks around the table and across the floor at an unhurried 3 km/h; glass crunches under his shoes.
+9.0s HARD CUT
+9.0s to 10.5s — he kneels on one knee beside Mara. She holds her breath, shoulders lifted, eyes fixed on the floor.
+10.5s to 12.5s — he studies her face and asks softly, only to her: "What is your name?"
+12.5s to 14.0s — she lifts her eyes to him and answers, barely audible: "Mara."
+14.0s to 15.0s — he holds her gaze one beat longer.
+15.0s HARD CUT
+15.0s to 19.0s — he rises, turns to face the room, and says calmly, with a long pause before her name: "From tomorrow… Mara is my assistant."
+19.0s HARD CUT
+19.0s to 21.0s — Theo's smile freezes and he steps forward half a pace.
+21.0s to 23.0s — still smiling, his voice tight: "Your assistant… is me."
+23.0s HARD CUT
+23.0s to 26.0s — in the silence, Theo snaps the notebook shut with a sharp clap.
 
-LIGHTING: Soft daylight from the tall windows on the left side of the room; warm brass pendant light above the table. Same logic in every shot.
+PERFORMANCE
+Two opposite readings of the same moment. Mara: braced for a blow, breath held, a tremor in her lower lip, her eyes rising slowly only at his question. Lucien: quiet wonder, his pupils widening, the hint of a smile held back, the stillness of a man who has just been saved. Theo: the smile stays fixed while his eyes go flat and his nostrils flare. Pore-level skin realism, visible breath, living catch-lights.
 
-AUDIO: Crunching glass footsteps, breathing, the sharp clap of the notebook, deep silence. No music.
+PHYSICS
+Glass crunches and small shards skitter under the oxfords. The glasses chain swings with each step. The suit fabric creases at the knee as he kneels. The notebook claps shut with real stiffness.
 
-POSITIVE LOCKS: The room is identical to @PerfumeLab. Only the quoted lines are spoken, by the named characters. Mara has no headscarf. Mara stays kneeling until the end of the clip. No other people appear. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical.
+LIGHTING
+Key: soft daylight through the arched windows on the left wall, 5600K. Practical fill: three brass pendant lamps above the table, 3200K. White balance fixed at 4800K. Haze 5%, visible in the window beams at 6 meters depth. The same light logic holds in every segment.
+
+AUDIO
+Crunching footsteps on glass, breathing, the lines as written, the sharp notebook clap, then deep silence. The score stays silent.
+
+STYLE
+Photoreal cinematic drama, natural skin texture, fine organic film grain, soft prime-lens falloff, warm brass and amber against cool white marble.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The room is identical to @PerfumeLab. Mara's head stays bare, hair in the tight low bun, and she stays kneeling throughout. Lucien's paper strips stay on the table once he lays them down. Only the quoted lines are spoken, each by the named character. Lucien holds silence after Theo's line. The room holds only the named characters. Clean picture, image only.
 ```
 
-### Klip 6 — Sc. 6 — Zamknuté dvere (20 s)
-Referencie: @PerfumeLab (štýl), @MaraNoScarf, @Lucien
+### Klip 6 — Zamknuté dvere (20 s)
+Referencie: @PerfumeLab, @MaraNoScarf, @Lucien
 ```
-SCENE CONTEXT: Night. The same lab, empty and dark, lit by a single brass desk lamp. Lucien locks the door, hands Mara a clean paper strip, and whispers the secret that could destroy the house: he can no longer smell anything. We cut to black on her face, before she answers.
+SCENE CONTEXT
+At night, in an empty Parisian perfume laboratory lit by a single brass desk lamp, master perfumer Lucien locks the door, hands a young cleaner, Mara, a clean paper strip, and whispers that he can no longer smell anything. The shot ends on her widening eyes.
 
-ACTIVE REFERENCES:
-@PerfumeLab — the same laboratory at night; use as the style and layout reference: same marble table, curved wall of amber bottles, arched windows, double oak door.
-@MaraNoScarf — 24, grey work dress, white apron, no headscarf, tight low dark bun with loose strands, standing at the table. Silent. Face, hair and outfit 100% match the reference.
-@Lucien — 58, charcoal waistcoat and trousers, white shirt with sleeves rolled once, NO jacket (his jacket hangs over a chair back), silver glasses on a chain. Voice: speaks English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words; here almost a whisper. Face, hair and outfit 100% match the reference.
+ACTIVE REFERENCES
+@PerfumeLab: the same perfume laboratory, now at night. Layout and materials 100% match the reference.
+@MaraNoScarf: 24, cleaner, grey work dress, white apron, bare head with a tight low dark bun and loose strands, standing at the marble table, silent. 100% matches the reference.
+@Lucien: 58, charcoal waistcoat and trousers, white shirt with the sleeves rolled once, silver glasses on a chain; his charcoal jacket hangs over a chair back. Voice: English with a strong, elegant Parisian French accent, deep and slightly nasal, quiet and unhurried, soft French "r", long pauses before key words; here almost a whisper. 100% matches the reference.
 
-LOCATION MAP: Night: the arched windows on the left are dark blue-black. A single brass desk lamp stands on the marble table, center, the only light source. The double oak door on the right, a brass key in the lock. Lucien's charcoal jacket hangs over the back of the nearest chair. The floor is clean now.
+LOCATION MAP
+Foreground: the near end of the marble table with a glass jar of white paper strips and Lucien's jacket hanging over the nearest chair. Midground: a single brass desk lamp in the center of the table, the only warm light; Mara standing in its pool of light. Background: the curved wall of amber bottles glowing faintly where the lamplight reaches, fading into darkness. Left wall: the arched windows, deep blue-black, a cool moonlight rim. Right wall: the double oak door with a brass key in the lock. The floor is clean and dark, reflecting the lamp.
 
-FIRST FRAME AND SPATIAL BLOCKING: 9:16 vertical. Medium-wide: Mara standing at the table on the left of frame in the lamp's pool of light; Lucien on the right, at the door, his back to camera, hand on the key.
+FIRST FRAME / BLOCKING
+WS: Mara at the table camera-left inside the lamp's pool of light, turned toward the door; Lucien at the door camera-right, his back to camera, his hand already on the key.
 
-FORMAT MODE: Sequence with hard cuts at 4.0s, 9.0s, 13.0s. Real time. Hard cut to black at 20.0s.
+FORMAT MODE
+Timed multishot, total 20.0 seconds. Cuts only at the specified points, the camera does not cut on its own. Hard cut to black at 20.0s.
 
-OPTICS AND CAMERA:
-Shot 1 (0.0–4.0s): medium-wide, 35mm, about 55° FOV, chest height, static.
-Shot 2 (4.0–9.0s): two-shot at the table, 50mm, slow arc 15° around them, to tighten the space.
-Shot 3 (9.0–13.0s): over-the-shoulder close on Mara, 85mm.
-Shot 4 (13.0–20.0s): tight two-shot, faces close, 85mm, very slow push-in to Mara's eyes.
+OPTICS
+Segment 1: WS, 63°. Segment 2: two-shot, 47°. Segment 3: over-the-shoulder CU on Mara, 29°. Segment 4: tight two-shot, 29°, faces close. No drift mid-segment.
 
-ACTION TIMING:
-0.0s–2.0s: Lucien turns the key; a loud metallic click.
-2.0s–4.0s: Mara's head turns toward the sound, her hands tightening on her apron.
-4.0s–6.0s: Lucien walks to her, takes a clean white paper strip from a glass jar, and holds it out.
-6.0s–9.0s: quietly: "Tell me what you smell."
-9.0s–11.0s: she takes the strip slowly, confused, looking from the strip to him.
-11.0s–13.0s: he leans in close, the lamp lighting half his face; his composure cracks, his eyes wet.
-13.0s–17.5s: he whispers, with a long pause: "Because I… smell nothing."
-17.5s–20.0s: Mara's eyes widen; her lips part; the strip trembles in her fingers. Hard cut to black at 20.0s.
+CAMERA
+Segment 1: chest height, 5 meters back, locked off. Segment 2: chest height, 2 meters, a slow 15° arc around the pair at 1 km/h, tightening the space. Segment 3: over Lucien's shoulder, 1 meter, locked off. Segment 4: 0.8 meters, a very slow push-in at 0.3 km/h toward Mara's eyes. The camera stays on the shadow side, the lamp beyond the faces, operator axis across the table toward the windows. Tonal character: deep shadows with full detail, a warm highlight roll-off on skin.
 
-PHYSICS: The paper strip is light and flexes. The key turns with resistance. Dust motes drift in the lamp beam.
+ACTION
+0.0s to 2.0s — Lucien turns the key; the lock clicks loudly.
+2.0s to 4.0s — Mara's head turns toward the sound; her hands close on her apron.
+4.0s HARD CUT
+4.0s to 6.0s — Lucien walks to her at 2 km/h, takes a clean white paper strip from the glass jar and holds it out.
+6.0s to 9.0s — he says quietly: "Tell me what you smell."
+9.0s HARD CUT
+9.0s to 11.0s — she takes the strip slowly, her eyes moving from the strip to his face, searching.
+11.0s to 13.0s — he leans closer; the lamp lights half his face; his composure cracks and his eyes glisten.
+13.0s HARD CUT
+13.0s to 17.5s — he whispers, with a long pause: "Because I… smell nothing."
+17.5s to 20.0s — Mara's eyes widen, her lips part, the strip trembles between her fingers.
+20.0s HARD CUT to black.
 
-LIGHTING: One warm brass desk lamp on the table, low and from the center, casting strong chiaroscuro; deep shadows; faint cool blue moonlight from the left windows as a rim. Same logic in every shot.
+PERFORMANCE
+Lucien: the proud mask slips; his lower eyelids fill with tears, the breath before "nothing" catches, a tiny tremor runs along his jaw. Mara: wary confusion turns to shock, her pupils dilating, breath stopping. Pore-level skin realism, warm catch-lights from the lamp, visible breath in the lamplight.
 
-AUDIO: The lock click, a distant Paris street sound through the windows, breathing, the whisper. A single low cello note rises under the last line and cuts with the picture.
+PHYSICS
+The key turns with mechanical resistance. The paper strip is light and flexes. Dust motes drift slowly through the lamp beam.
 
-POSITIVE LOCKS: The laboratory matches @PerfumeLab in layout and style, at night. Only Mara and Lucien are present. Only Lucien speaks, only the quoted lines. Lucien has no jacket on; Mara has no headscarf. Clean picture without on-screen text, no subtitles, no logos. 9:16 vertical.
+LIGHTING
+Key: one brass desk lamp on the table, 2700K, low and central, strong chiaroscuro across both faces. Rim: cool moonlight through the left windows, 8500K, a thin edge on hair and shoulders. White balance fixed at 3200K. Haze 10%, visible in the lamp beam at 2 meters. The same light logic holds in every segment.
+
+AUDIO
+The lock click, a distant Paris street hum through the windows, breathing, the whisper. A single low cello note rises under the last line and cuts with the picture to black.
+
+STYLE
+Photoreal cinematic night drama, natural skin texture, fine organic film grain, soft prime-lens falloff, warm amber lamplight against cold blue darkness.
+
+OUTPUT SETTINGS
+9:16 vertical, real time at 24 fps.
+
+POSITIVE LOCKS
+The laboratory matches @PerfumeLab in layout and materials, at night. Mara and Lucien are alone in the room. Only Lucien speaks, only the quoted lines. Lucien wears his waistcoat and shirtsleeves throughout; his jacket stays on the chair back. Mara's head stays bare, hair in the tight low bun. Clean picture, image only.
 ```
 
 ---
