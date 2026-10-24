@@ -88,15 +88,65 @@ def shade(canvas, top):
     canvas.paste(layer, (0, 0), alpha)
 
 
-def slide_photo_text(src, out, n, total, step, title, text, focus=(0.5, 0.5), label=None):
+MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+
+
+def prompt_card(canvas, top, bottom, text, px=22):
+    """Kúsok skutočného promptu: hore čitateľný, smerom nadol sa rozmaže a stratí."""
+    x0, x1 = MARGIN, W - MARGIN
+    ImageDraw.Draw(canvas).rounded_rectangle((x0, top, x1, bottom), radius=20, fill=(62, 18, 21))
+    pill(ImageDraw.Draw(canvas), (x0 + 22, top + 18), "prompt", px=22)
+
+    f = ImageFont.truetype(MONO, px)
+    width = x1 - x0 - 56
+    lines, line = [], ""
+    for word in text.split():
+        trial = (line + " " + word).strip()
+        if f.getlength(trial) > width and line:
+            lines.append(line)
+            line = word
+        else:
+            line = trial
+    lines.append(line)
+
+    area_top = top + 72
+    area_h = bottom - area_top - 14
+    layer = Image.new("RGBA", (x1 - x0, area_h), (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    y = 0
+    for ln in lines:
+        if y > area_h:
+            break
+        ld.text((28, y), ln, font=f, fill=CREAM + (255,))
+        y += int(px * 1.45)
+
+    bands = 14
+    band_h = max(1, area_h // bands)
+    out = Image.new("RGBA", layer.size, (0, 0, 0, 0))
+    for b in range(bands):
+        t = b / (bands - 1)
+        radius = 0 if t < 0.38 else (t - 0.38) / 0.62 * 7
+        alpha = 1.0 if t < 0.45 else max(0.0, 1 - (t - 0.45) / 0.55)
+        blurred = layer.filter(ImageFilter.GaussianBlur(radius)) if radius else layer
+        box = (0, b * band_h, layer.width, area_h if b == bands - 1 else (b + 1) * band_h)
+        piece = blurred.crop(box)
+        a = piece.split()[3].point(lambda v, k=alpha: int(v * k))
+        piece.putalpha(a)
+        out.alpha_composite(piece, (0, box[1]))
+    canvas.paste(out, (x0, area_top), out)
+
+
+def slide_photo_text(src, out, n, total, step, title, text, focus=(0.5, 0.5), label=None, prompt=None):
     c = Image.new("RGB", (W, H), WINE)
-    photo(c, src, (MARGIN, MARGIN, W - MARGIN, 820), focus)
+    photo(c, src, (MARGIN, MARGIN, W - MARGIN, 680), focus)
     d = ImageDraw.Draw(c)
     if label:
-        pill(d, (MARGIN + 24, 820 - 80), label)
-    d.text((MARGIN, 862), step, font=font("i", 32), fill=(200, 170, 165))
-    y = headline(d, (MARGIN, 905), title, 72)
-    body(d, (MARGIN, y + 34), text)
+        pill(d, (MARGIN + 24, 680 - 80), label)
+    d.text((MARGIN, 712), step, font=font("i", 32), fill=(200, 170, 165))
+    y = headline(d, (MARGIN, 752), title, 66)
+    y = body(d, (MARGIN, y + 22), text, px=31)
+    if prompt:
+        prompt_card(c, y + 22, H - 95, prompt)
     page_no(d, n, total)
     c.save(out, quality=94)
 
@@ -119,22 +169,35 @@ def build(src, out_dir):
                      [[("tvár", "r"), ("z castingu", "i")]],
                      "Jeden prompt, šesť rôznych fiktívnych žien. Štýl módnych magazínov "
                      "z rokov 2000–2005: filmové zrno, mäkké svetlo, viditeľné póry. Vybrala som Mary.",
-                     focus=(0.5, 0.35), label="prompt → 6 tvárí")
+                     focus=(0.5, 0.35), label="1 prompt = 6 tvárí",
+                     prompt="Create a single standalone photographic face-reference portrait, one woman only, "
+                            "head and shoulders, vertical 3:4. Casting selection: each output shows a different "
+                            "fictional adult brunette woman, age 24-28, striking early-2000s high-fashion "
+                            "supermodel looks, natural facial asymmetry, preserve visible pores, organic film grain")
     slide_photo_text(f"{src}/outfit.jpg", f"{out_dir}/03.jpg", 3, total, "krok 2",
                      [[("oblečenie", "r"), ("zvlášť", "i")]],
                      "Uniforma vznikla ako samostatná fotka, bez tváre. Tak sa tvár a "
                      "oblečenie nemiešajú a každé sa dá meniť samostatne.",
-                     focus=(0.5, 0.15))
+                     focus=(0.5, 0.15),
+                     prompt="Clothing reference photo, framed from the shoulders to the feet, the head out of "
+                            "frame. A young slim woman wearing a plain charcoal-grey short-sleeved cotton work "
+                            "dress, a crisp white cotton apron tied at the waist, white low-top canvas sneakers, "
+                            "plain light grey studio wall, even soft light from the front-left, photorealistic fabric texture, "
+                            "visible cotton weave, soft natural wrinkles, modest working-class look")
 
     # 4 · character sheet (široký obrázok, iná kompozícia)
     c = Image.new("RGB", (W, H), WINE)
-    photo(c, f"{src}/sheet.webp", (MARGIN, 150, W - MARGIN, 150 + int((W - 2 * MARGIN) * 0.75)), focus=(0.5, 0.5))
+    photo(c, f"{src}/sheet.webp", (MARGIN, 130, W - MARGIN, 130 + int((W - 2 * MARGIN) * 0.62)), focus=(0.5, 0.5))
     d = ImageDraw.Draw(c)
     d.text((MARGIN, 80), "krok 3", font=font("i", 32), fill=(200, 170, 165))
-    y = headline(d, (MARGIN, 860), [[("character", "r"), ("sheet", "i")]], 72)
-    body(d, (MARGIN, y + 34),
-         "Spredu, zozadu a detail tváre. Tvár na celej postave je zámerne prázdna: "
-         "AI potom berie tvár iba z detailu a Mary vyzerá v každom zábere rovnako.")
+    y = headline(d, (MARGIN, 740), [[("character", "r"), ("sheet", "i")]], 72)
+    y = body(d, (MARGIN, y + 22), px=31, text=
+             "Spredu, zozadu a detail tváre. Tvár na celej postave je zámerne prázdna: "
+             "AI potom berie tvár iba z detailu a Mary vyzerá v každom zábere rovnako.")
+    prompt_card(c, y + 22, H - 95,
+                "Character reference sheet built from the two attached images. Three views side by side. "
+                "On the full-body front view, leave the face blank: a smooth, featureless oval, no eyes, "
+                "nose or mouth. The close-up is the only face reference. Plain mid-grey background")
     page_no(d, 4, total)
     c.save(f"{out_dir}/04.jpg", quality=94)
 
@@ -142,17 +205,31 @@ def build(src, out_dir):
                      [[("svet", "r"), ("okolo nej", "i")]],
                      "Sterilné biele laboratórium parížskeho parfumérskeho domu. "
                      "Jantárové fľaštičky sú jediná teplá farba v miestnosti.",
-                     focus=(0.5, 0.5))
+                     focus=(0.42, 0.5),
+                     prompt="Interior of a modern, sterile, pristine white perfume laboratory, wide three-quarter "
+                            "view, an empty room. Back wall: a long built-in perfume organ, white lacquered "
+                            "shelving in a gentle curve, hundreds of small amber glass bottles; the amber glass "
+                            "is the only warm color in the room. Floor: large polished white porcelain tiles with a subtle "
+                            "mirror-like reflection. Cool-neutral light, 5600K, soft daylight from the left")
     slide_photo_text(f"{src}/scene.jpg", f"{out_dir}/06.jpg", 6, total, "krok 5",
                      [[("a potom", "r"), ("hrá", "i")]],
                      "Sheet + laboratórium + presný prompt so strihmi, uhlami kamery a "
                      "replikami. Z toho vznikne scéna s hlasom a hereckým výkonom.",
-                     focus=(0.62, 0.4), label="Seedance")
+                     focus=(0.62, 0.4), label="Seedance",
+                     prompt="SCENE CONTEXT: a 7-second final scene in a pristine white Parisian perfume "
+                            "laboratory. Alone with Mary, Lucien quietly reveals that he has lost his sense of "
+                            "smell. FORMAT MODE: one continuous shot, the camera does not cut on its own. OPTICS: eye-level "
+                            "close two-shot, 29° field of view, a gentle push forward of 10 cm over seven seconds. ACTION: "
+                            "Lucien offers the scented strip, Mary raises it below her nose")
     slide_photo_text(f"{src}/fail.jpg", f"{out_dir}/07.jpg", 7, total, "keď AI zlyhá",
                      [[("Mary s tvárou", "r")], [("asistenta", "i")]],
                      "Zlé poradie obrázkov a AI dala Mary tvár Théa. Oprava: vždy iba tie "
                      "postavy, ktoré sú v scéne, a v správnom poradí.",
-                     focus=(0.5, 0.3), label="chyba")
+                     focus=(0.5, 0.3), label="chyba",
+                     prompt="@image2: Mary, a 24-year-old young woman, cleaner. Match her female face from the "
+                            "close-up portrait panel. The blank faces on the full-body panels serve only as body "
+                            "and wardrobe guides. Exactly two people. Mary keeps her headscarf throughout. The laboratory from "
+                            "@image1 is visible behind them in every frame")
 
     # 8 · výzva
     c = Image.new("RGB", (W, H), WINE)
