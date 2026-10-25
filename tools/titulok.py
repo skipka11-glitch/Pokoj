@@ -16,7 +16,7 @@ def draw_word(draw, xy, text, font, tracking, fill):
     return x
 
 
-def render(out, parts, size=(1280, 720), pos=(80, 520), px=76, tracking=-4):
+def render(out, parts, size=(1280, 720), pos=(80, 520), px=76, tracking=-4, shadow=0.55, blur=6):
     """parts: zoznam riadkov, každý riadok je zoznam (text, 'r'|'i')."""
     text_layer = Image.new("RGBA", size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(text_layer)
@@ -30,11 +30,11 @@ def render(out, parts, size=(1280, 720), pos=(80, 520), px=76, tracking=-4):
         y += int(px * 0.92)
     # jemný tieň pod textom, aby bol čitateľný na svetlom pozadí
     alpha = text_layer.split()[3]
-    shadow = Image.new("RGBA", size, (0, 0, 0, 0))
-    shadow.putalpha(alpha.point(lambda a: int(a * 0.55)))
-    shadow = shadow.filter(ImageFilter.GaussianBlur(6))
+    shadow_layer = Image.new("RGBA", size, (0, 0, 0, 0))
+    shadow_layer.putalpha(alpha.point(lambda a: int(min(255, a * shadow))))
+    shadow_layer = shadow_layer.filter(ImageFilter.GaussianBlur(blur))
     result = Image.new("RGBA", size, (0, 0, 0, 0))
-    result.alpha_composite(shadow, (2, 3))
+    result.alpha_composite(shadow_layer, (2, 3))
     result.alpha_composite(text_layer)
     result.save(out)
 
